@@ -1,0 +1,173 @@
+/* Game board container */
+.game-board {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background: #f0f4f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Score card */
+.score-card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Turn indicator */
+.turn-indicator {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #007bff;
+}
+
+/* Possible options */
+.possible-options {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Sketch areas */
+.sketch-pad,
+.ai-sketch {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+/* Canvas styles */
+.sketch-canvas,
+.ai-canvas {
+  width: 400px;
+  height: 300px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Submit button */
+.submit-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+/* Modal Overlay */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards; /* Smooth fade-in effect */
+}
+
+/* Modal Content */
+.modal-content {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  transform: scale(0.8);
+  animation: scaleUp 0.3s ease-in-out forwards;
+}
+
+/* Game Over Title */
+.modal-content h2 {
+  font-size: 2rem;
+  color: #ff3b30; /* Red for emphasis */
+  margin-bottom: 10px;
+}
+
+/* Score Display */
+.modal-content p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Winner Message */
+.modal-content p:last-child {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #007bff;
+}
+
+/* Play Again Button */
+.modal-content button {
+  background: #3528a7; /* Green for encouragement */
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  margin-top: 15px;
+  outline: none;
+}
+
+.modal-content button:hover {
+  background: #302188;
+  transform: scale(1.05);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scale-up animation */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
